@@ -8,6 +8,7 @@ readFile('./json-data.json', 'utf-8', (err, fileContent) => {
         console.log(err); 
         throw new Error(err);
     }
+    //converting to csv
     const csvData = csvjson.toCSV(fileContent, {
         headers: 'key'
     });
